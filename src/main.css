@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#app {
+    height: 100%
+}
+
+body {
+    @apply bg-lightbg text-gray-800
+}
+
+html.dark body {
+    @apply bg-darkbg text-gray-100
+}
+
+.card {
+    @apply bg-white dark:bg-darkbg border border-gray-200 dark:border-gray-700 rounded-xl shadow-soft
+}
+
+.btn {
+    @apply px-4 py-2 rounded-lg transition
+}
+
+.btn-primary {
+    @apply bg-primary text-gray-900 hover:bg-primary-dark
+}
+
+.btn-outline {
+    @apply border border-gray-400 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800
+}
+
+.table {
+    @apply w-full text-sm border-collapse
+}
+
+.table thead {
+    @apply bg-yellow-100 dark:bg-gray-800
+}
+
+.table th, .table td {
+    @apply p-2 border-b border-gray-200 dark:border-gray-700 text-left
+}
+
+.map-container {
+    @apply mx-auto mt-4 w-full max-w-5xl
+}
+
+.map-surface {
+    @apply bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-4;
+    min-height: 480px
+}
