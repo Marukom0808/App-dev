@@ -14,27 +14,27 @@ const router = useRouter();
 
 async function signup() {
   error.value = "";
-  console.log("🟡 Starting signup..."); // ADD THIS LINE
+  console.log("🟡 Starting signup..."); 
 
-  // Basic validation
+
   if (!username.value.trim() || !email.value.trim() || !password.value.trim()) {
     error.value = "Please fill out all fields";
     return;
   }
 
   try {
-    console.log("🟡 Sending request to backend..."); // ADD THIS LINE
+    console.log("🟡 Sending request to backend..."); 
     const res = await api.post("/signup", { 
       username: username.value, 
       email: email.value, 
       password: password.value 
     });
     
-    console.log("✅ Signup successful:", res.data); // ADD THIS LINE
+    console.log("✅ Signup successful:", res.data); 
     success.value = "Account created!";
     router.push("/login");
   } catch (err) {
-    console.error("❌ Signup error:", err); // ADD THIS LINE
+    console.error("❌ Signup error:", err);
     error.value = err.response?.data?.error || "Unable to connect to server.";
   }
 }

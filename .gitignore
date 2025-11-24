@@ -1,0 +1,37 @@
+# Frontend dependencies
+node_modules/
+
+# Backend dependencies  
+backend/node_modules/
+
+# Environment variables
+.env
+backend/.env
+
+# Database files
+*.db
+*.sqlite
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
